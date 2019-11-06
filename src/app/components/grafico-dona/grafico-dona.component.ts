@@ -1,7 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-
-import { ChartType } from 'chart.js';
-import { SingleDataSet, Label } from 'ng2-charts';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-grafico-dona',
@@ -10,10 +7,9 @@ import { SingleDataSet, Label } from 'ng2-charts';
 })
 export class GraficoDonaComponent implements OnInit {
 
-  @Input('ChartLabels') doughnutChartLabels: Label[] = [];
-  @Input('ChartData') doughnutChartData: SingleDataSet = [];
-  @Input('ChartType') doughnutChartType: ChartType = 'doughnut';
-
+  @Input('chartLabels') doughnutChartLabels: string[] = [];
+  @Input('chartData') doughnutChartData: number[] = [];
+  @Input('chartType') doughnutChartType: string = '';
 
   constructor() { }
 
